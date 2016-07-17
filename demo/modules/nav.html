@@ -1,0 +1,58 @@
+{{view controller="nav" app="demo" /}}
+{{header title="nav" /}}
+{{main}}
+    <div class="page page--header-sub"> 
+        <section class="header-sub">
+            <ul class="nav-list nav-list--tab">
+                <li class="nav-item active" onclick="[[tabIndex=0]]">个性推荐</li>
+                <li class="nav-item" onclick="[[tabIndex=1]]">歌单</li>
+                <li class="nav-item" onclick="[[tabIndex=2]]">主播电台</li>
+                <li class="nav-item" onclick="[[tabIndex=3]]">排行榜</li>
+            </ul>
+        </section>
+        <div class="content">
+            <ul class="nav-list nav-list--btn" show="[[tabIndex==0]]">
+                <li class="nav-item active">个性推荐</li>
+                <li class="nav-item">个性推荐1</li>
+                <li class="nav-item">个性推荐2</li>
+            </ul>
+            <ul class="nav-list nav-list--btn" show="[[tabIndex==1]]">
+                <li class="nav-item active">歌单</li>
+                <li class="nav-item">歌单1</li>
+                <li class="nav-item">歌单2</li>
+            </ul>
+            <ul class="nav-list nav-list--btn" show="[[tabIndex==2]]">
+                <li class="nav-item active">主播电台主播电台</li>
+                <li class="nav-item">主播电台1</li>
+                <li class="nav-item">主播电台2</li>
+            </ul>
+            <ul class="nav-list nav-list--btn" show="[[tabIndex==3]]">
+                <li class="nav-item active">排行榜</li>
+                <li class="nav-item">排行榜1</li>
+                <li class="nav-item">排行榜2</li>
+            </ul>
+        </div>
+    </div>
+{{/main}}
+{{footer}}
+    <ul class="nav-list nav-list--bottom">
+        <li class="nav-item active">
+            <svg class="item-icon icon-svg icon-home"><use xlink:href="images/icons.svg#icon-home"></use></svg>
+            <span class="remind-circle"></span>
+            <p class="item-txt">菜单一</p>
+        </li>
+        <li class="nav-item">
+            <svg class="item-icon icon-svg icon-music"><use xlink:href="images/icons.svg#icon-music"></use></svg>
+            <span class="remind-num">99</span>
+            <p class="item-txt">菜单二</p>
+        </li>
+        <li class="nav-item">
+            <svg class="item-icon icon-svg icon-user"><use xlink:href="images/icons.svg#icon-user"></use></svg>
+            <p class="item-txt">菜单三</p>
+        </li>
+        <li class="nav-item">   
+            <svg class="item-icon icon-svg icon-image"><use xlink:href="images/icons.svg#icon-image"></use></svg>
+            <p class="item-txt">菜单四</p>
+        </li>
+    </ul>
+{{/footer}}

@@ -1,0 +1,101 @@
+{{view controller="line" app="demo" /}}
+{{header title="line list" /}}
+{{main}}
+    <div class="page">
+        <div class="content">
+            <h2 class="guide-title">单行文字列表</h2>
+            <ul class="line-list">
+                {{for item in citys}}
+                <li class="line-item">{{text item /}}</li>
+                {{/for}}
+            </ul>
+            <h2 class="guide-title">单行文字居中列表</h2>
+            <ul class="line-list line-list--center">
+                {{for item in citys}}
+                <li class="line-item">{{text item /}}</li>
+                {{/for}}
+            </ul>
+            <h2 class="guide-title">select</h2>
+            <ul class="line-list line-list--select">
+                {{for item in citys}}
+                <li class="line-item[[selectIndex == $index? ' active' : '']]" onclick="[[selectIndex=$index]]">{{text item /}}</li>
+                {{/for}}
+            </ul>
+            <h2 class="guide-title">mutil select</h2>
+            <ul class="line-list line-list--multi-select">
+                {{for item in citys}}
+                <li class="line-item[[mSelectIndex.indexOf($index) >= 0? ' active':'']]" onclick="[[mutlSelect($index)]]"><i class="icon-checkbox"></i>{{text item /}}</li>
+                {{/for}}
+            </ul>
+            <h2 class="guide-title">indent</h2>
+            <ul class="line-list line-list--indent">
+                <li class="line-item">北京</li>
+                <li class="line-item">上海</li>
+                <li class="line-item">广州</li>
+            </ul>
+            <h2 class="guide-title">v-right(:after)</h2>
+            <ul class="line-list line-list--indent line-list--after-v">
+                <li class="line-item">北京</li>
+                <li class="line-item active">上海</li>
+                <li class="line-item">广州</li>
+            </ul>
+            <h2 class="guide-title">item flex</h2>
+            <ul class="line-list line-list--indent line-list--flex">
+                <li class="line-item">
+                    <p class="item-tt">flex item</p>
+                    <i class="icon-switch[[flex1? ' active':'']]"
+                        onclick="[[flex1= !flex1]]"></i>
+                </li>
+                <li class="line-item">
+                    <p class="item-tt">flex item</p>
+                    <i class="icon-switch[[flex2? ' active':'']]"
+                        onclick="[[flex2= !flex2]]"></i>
+                </li>
+                <li class="line-item">
+                    <svg class="item-icon icon-svg icon-music"><use xlink:href="images/icons.svg#icon-music"></use></svg>
+                    <p class="item-tt">flex item</p>
+                    <i class="icon-v-right"></i>
+                </li>
+                <li class="line-item">
+                    <p class="item-tt">flex item</p>
+                    <span class="item-append">右侧文字</span>
+                    <i class="icon-v-right"></i>
+                </li>
+                <li class="line-item">
+                    <p class="item-tt">flex item</p>
+                    <span class="remind-num">99</span>
+                    <i class="icon-v-right"></i>
+                </li>
+                <li class="line-item">
+                    <div class="item-bd">
+                        <h3 class="bd-tt">青岛</h3>
+                        <p class="bd-txt">青岛是国家历史文化名城、重点历史风貌保护城市、首批中国优秀旅游城市</p>
+                    </div>
+                    <i class="icon-v-right"></i>
+                </li>
+                <li class="line-item">
+                    <div class="item-bd">
+                        <h3 class="bd-tt">青岛</h3>
+                        <p class="bd-txt ellipsis">青岛是国家历史文化名城、重点历史风貌保护城市、首批中国优秀旅游城市</p>
+                    </div>
+                    <i class="icon-v-right"></i>
+                </li>
+                <li class="line-item">
+                    <img src="http://placehold.it/40?text=40" alt="" class="item-img">
+                    <div class="item-bd">
+                        <h3 class="bd-tt">青岛</h3>
+                        <p class="bd-txt ellipsis">青岛是国家历史文化名城、重点历史风貌保护城市、首批中国优秀旅游城市</p>
+                    </div>
+                    <i class="icon-v-right"></i>
+                </li>
+            </ul>
+            <div class="infinite-loading">正在加载
+                <span class="loading-animate">
+                    <i class="loading-dotted"></i>
+                    <i class="loading-dotted"></i>
+                    <i class="loading-dotted"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+{{/main}}

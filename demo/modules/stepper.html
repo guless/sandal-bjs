@@ -1,0 +1,19 @@
+{{view controller="stepper" app="demo" /}}
+{{header title="stepper" /}}
+{{main}}
+    <div class="page">    
+        <div class="content">
+            <h2 class="guide-title">默认样式</h2>
+            <div class="stepper">
+                <span class="stepper-minus" onclick="[[num--]]"></span>
+                <input type="text" class="stepper-num" model="[[num]]">
+                <span class="stepper-plus" onclick="[[num++]]"></span>
+            </div>
+            <h2 class="guide-title">最小样式</h2>
+            <div class="stepper stepper--mini">
+                <span class="stepper-minus"></span>
+                <span class="stepper-plus"></span>
+            </div>
+        </div>
+    </div>
+{{/main}}

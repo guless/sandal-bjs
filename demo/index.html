@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telphone=no,email=no"/>
+	<link rel="stylesheet" href="css/global.css">
+	<title>sheral</title>
+    <style type="text/css">
+        [class^='icon']{margin: 10px;}
+        .demo1 [class^="btn"]{margin: 10px;}
+        .dialog{
+            margin-bottom: 10px;
+        }
+        .full-center-wrap{
+            flex-direction: column;
+        }
+        /* layout */
+        pre{
+            background-color: #fff;
+        }
+        .decimal-list{
+            list-style: decimal;
+            padding-left: 20px;
+        }
+        /* line-equal */
+        .equal--item .item-icon{
+            display: flex;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            color: #fff;
+            background: #ff7800;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+        }
+        .equal--item .icon-svg{
+            fill: #fff;
+            width: 18px;
+            height: 18px;
+        }
+    </style>
+</head>
+<body>
+<script type="text/html" id="main">
+    {{view controller="main" app="demo" name="main" /}}
+    {{include src="commands" /}}
+    {{header}}
+        <h1 class="page-tt">sheral</h1>
+    {{/header}}
+    {{main}}
+        <div class="page">
+            <div class="site-slogan">Focus in mobile UI</div>
+            <div class="line-list line-list--indent line-list--after-v">
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('icon')]]">icon</a>
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('btn')]]">btn</a>
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('header')]]">header</a>
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('nav')]]">nav</a>
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('tool')]]">tool</a>
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('search')]]">search</a>
+                
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('line')]]">line</a>
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('form')]]">form</a>
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('media')]]">media</a>
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('card')]]">card</a>
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('cell')]]">cell</a>
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('tag')]]">tag</a>
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('line-equal')]]">line-equal</a>
+
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('range')]]">range</a>
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('progress')]]">progress</a>
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('stepper')]]">stepper</a>
+
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('toast')]]">toast</a>
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('dialog')]]">dialog</a>
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('popover')]]">popover</a>
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('actionsheet')]]">actionsheet</a>
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('picker')]]">picker</a>
+                <a class="line-item" href="javascript:void(0)" onclick="[[$site.open('filter')]]">filter</a>
+
+            </div>
+        </div>
+    {{/main}}
+    {{cp name="pageContent" /}}
+</script>
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="js/bingo.min.js"></script>
+<script type="text/javascript" src="js/commands.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
