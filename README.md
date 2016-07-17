@@ -4,7 +4,7 @@
 
 ## demo
 
-[在线demo](https://guless.github.io/sandal-bjs/index.html)
+[在线demo](https://guless.github.io/sandal-bjs/demo/index.html)
 
 PS：基于sheral 使用bingoJS2 实现模块化单页面
 ## 本地搭建
