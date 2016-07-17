@@ -27,4 +27,17 @@
 
 	});
 
+	app.command('preLoadTmpl', function(cp) {
+
+		cp.$ready(function() {
+			var files = cp.$attrs.src.$result();
+			if (bingo.isArray(files)){
+				bingo.each(files, function(item){
+					app.tmpl('view::'+item);
+				});
+			}
+		});
+
+	});
+
 })(bingoV2, window.jQuery);
