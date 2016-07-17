@@ -27,13 +27,14 @@
 
 	});
 
-	app.command('preLoadTmpl', function(cp) {
+	app.command('preLoad', function(cp) {
 
 		cp.$ready(function() {
 			var files = cp.$attrs.src.$result();
 			if (bingo.isArray(files)){
 				bingo.each(files, function(item){
 					app.tmpl('view::'+item);
+					app.using('controller::'+item);
 				});
 			}
 		});
