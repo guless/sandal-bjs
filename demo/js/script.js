@@ -51,7 +51,7 @@ $(function() {
 		url: '{view*}',
 		toUrl: 'modules/{view*}.html',
 		defaultValue: {
-			tmpl: ''
+			view: ''
 		}
 	});
 
